@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'test_page3.dart';
 
 class TestPage2 extends StatelessWidget {
   const TestPage2({super.key});
@@ -14,8 +15,12 @@ class TestPage2 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             TextButton(
-              onPressed: () => {print("to test3")},
-              child: const Text("Test2"),
+              onPressed: () => {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const TestPage3())
+                )
+              },
+              child: const Text("Test3"),
             ),
             TextButton(
               onPressed: () => {Navigator.of(context).pop()},
