@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'test_page2.dart';
+// import 'test_page2.dart';
 
 class TestPage1 extends StatelessWidget {
   const TestPage1({super.key});
@@ -13,9 +13,10 @@ class TestPage1 extends StatelessWidget {
       body: Center(
         child: TextButton(
           onPressed: () => {
-            Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => const TestPage2())
-            )
+            Navigator.of(context).pushNamed('/test2')
+            // Navigator.of(context).push(
+            //   MaterialPageRoute(builder: (context) => const TestPage2())
+            // )
           },
           child: const Text("To Test2"),
         ),
